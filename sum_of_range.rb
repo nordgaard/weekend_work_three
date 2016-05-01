@@ -4,12 +4,12 @@
 
 
 def sum_of_range(array)
-  begining  = array.first.to_i
-  ending = array.last.to_i
-  range_array << (begining..ending)
-  p range_array
-
-  #must equal 10
+  sum = 0
+  range_array = (array.first.to_i..array.last.to_i).to_a
+  range_array.each do |number|
+    sum += number
+  end
+  return sum #must equal 10
 end
 
 # Driver code - don't touch anything below this line.
