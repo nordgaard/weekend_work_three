@@ -4,15 +4,21 @@
 
 
 def sum_of_range(array)
+  first = array[0]
+  last = array[1]
+  if first > last
+    range_array = (last..first).to_a
+  else
+    range_array = (first..last).to_a
+  end
   sum = 0
-  range_array = (array.first.to_i..array.last.to_i).to_a
   range_array.each do |number|
     sum += number
   end
-  return sum #must equal 10
+  return sum 
 end
 
-# Driver code - don't touch anything below this line.
+#Driver code - don't touch anything below this line.
 puts "TESTING sum_of_range..."
 puts
 
